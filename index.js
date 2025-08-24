@@ -17,6 +17,8 @@ mongoose
 //! Cors config
 const corsOptions = {
   origin: [process.env.FRONTEND_URI],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
 };
 app.use(cors(corsOptions));
 //!Middlewares
